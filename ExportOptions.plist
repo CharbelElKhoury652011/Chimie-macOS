@@ -29,8 +29,5 @@
     <key>uploadSymbols</key>
     <true/>
 
-    <!-- Générer le package pour Mac App Store -->
-    <key>destination</key>
-    <string>macOS</string>
 </dict>
 </plist>
