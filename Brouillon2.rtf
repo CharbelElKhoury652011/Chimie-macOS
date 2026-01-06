@@ -1,0 +1,581 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;\red252\green95\blue163;\red31\green31\blue36;\red255\green255\blue255;
+\red93\green216\blue255;\red208\green168\blue255;\red65\green161\blue192;\red208\green168\blue255;\red158\green241\blue221;
+\red103\green183\blue164;\red208\green191\blue105;\red252\green106\blue93;\red161\green103\blue230;\red161\green103\blue230;
+\red103\green183\blue164;\red108\green121\blue134;\red146\green161\blue177;}
+{\*\expandedcolortbl;;\csgenericrgb\c98839\c37355\c63833;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c100000\c100000\c100000\c85000;
+\csgenericrgb\c36295\c84643\c99897;\csgenericrgb\c81569\c65882\c100000;\csgenericrgb\c25490\c63137\c75294;\csgenericrgb\c81681\c65692\c99927;\csgenericrgb\c62145\c94386\c86819;
+\csgenericrgb\c40392\c71765\c64314;\csgenericrgb\c81498\c74939\c41233;\csgenericrgb\c98912\c41558\c36568;\csgenericrgb\c63137\c40392\c90196;\csgenericrgb\c63232\c40219\c90115;
+\csgenericrgb\c40538\c71705\c64209;\csgenericrgb\c42394\c47462\c52518;\csgenericrgb\c57255\c63137\c69412;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab593
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf2 \cb3 import
+\f1\b0 \cf4  SwiftUI\
+\
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 Element\cf4 : \cf6 Identifiable\cf4  \{\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 id\cf4  = \cf8 UUID\cf4 ()\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 number\cf4 : \cf8 Int\cf4 \
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 symbol\cf4 : \cf8 String\cf4 \
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 name\cf4 : \cf8 String\cf4 \
+\}\
+\
+
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 first30Elements\cf4 : [\cf9 Element\cf4 ] = [\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 1\cf4 , \cf10 symbol\cf4 : \cf12 "H"\cf4 , \cf10 name\cf4 : \cf12 "Hydrog\'e8ne"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 2\cf4 , \cf10 symbol\cf4 : \cf12 "He"\cf4 , \cf10 name\cf4 : \cf12 "H\'e9lium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 3\cf4 , \cf10 symbol\cf4 : \cf12 "Li"\cf4 , \cf10 name\cf4 : \cf12 "Lithium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 4\cf4 , \cf10 symbol\cf4 : \cf12 "Be"\cf4 , \cf10 name\cf4 : \cf12 "B\'e9ryllium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 5\cf4 , \cf10 symbol\cf4 : \cf12 "B"\cf4 , \cf10 name\cf4 : \cf12 "Bore"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 6\cf4 , \cf10 symbol\cf4 : \cf12 "C"\cf4 , \cf10 name\cf4 : \cf12 "Carbone"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 7\cf4 , \cf10 symbol\cf4 : \cf12 "N"\cf4 , \cf10 name\cf4 : \cf12 "Azote"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 8\cf4 , \cf10 symbol\cf4 : \cf12 "O"\cf4 , \cf10 name\cf4 : \cf12 "Oxyg\'e8ne"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 9\cf4 , \cf10 symbol\cf4 : \cf12 "F"\cf4 , \cf10 name\cf4 : \cf12 "Fluor"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 10\cf4 , \cf10 symbol\cf4 : \cf12 "Ne"\cf4 , \cf10 name\cf4 : \cf12 "N\'e9on"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 11\cf4 , \cf10 symbol\cf4 : \cf12 "Na"\cf4 , \cf10 name\cf4 : \cf12 "Sodium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 12\cf4 , \cf10 symbol\cf4 : \cf12 "Mg"\cf4 , \cf10 name\cf4 : \cf12 "Magn\'e9sium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 13\cf4 , \cf10 symbol\cf4 : \cf12 "Al"\cf4 , \cf10 name\cf4 : \cf12 "Aluminium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 14\cf4 , \cf10 symbol\cf4 : \cf12 "Si"\cf4 , \cf10 name\cf4 : \cf12 "Silicium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 15\cf4 , \cf10 symbol\cf4 : \cf12 "P"\cf4 , \cf10 name\cf4 : \cf12 "Phosphore"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 16\cf4 , \cf10 symbol\cf4 : \cf12 "S"\cf4 , \cf10 name\cf4 : \cf12 "Soufre"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 17\cf4 , \cf10 symbol\cf4 : \cf12 "Cl"\cf4 , \cf10 name\cf4 : \cf12 "Chlore"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 18\cf4 , \cf10 symbol\cf4 : \cf12 "Ar"\cf4 , \cf10 name\cf4 : \cf12 "Argon"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 19\cf4 , \cf10 symbol\cf4 : \cf12 "K"\cf4 , \cf10 name\cf4 : \cf12 "Potassium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 20\cf4 , \cf10 symbol\cf4 : \cf12 "Ca"\cf4 , \cf10 name\cf4 : \cf12 "Calcium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 21\cf4 , \cf10 symbol\cf4 : \cf12 "Sc"\cf4 , \cf10 name\cf4 : \cf12 "Scandium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 22\cf4 , \cf10 symbol\cf4 : \cf12 "Ti"\cf4 , \cf10 name\cf4 : \cf12 "Titane"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 23\cf4 , \cf10 symbol\cf4 : \cf12 "V"\cf4 , \cf10 name\cf4 : \cf12 "Vanadium"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 24\cf4 , \cf10 symbol\cf4 : \cf12 "Cr"\cf4 , \cf10 name\cf4 : \cf12 "Chrome"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 25\cf4 , \cf10 symbol\cf4 : \cf12 "Mn"\cf4 , \cf10 name\cf4 : \cf12 "Mangan\'e8se"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 26\cf4 , \cf10 symbol\cf4 : \cf12 "Fe"\cf4 , \cf10 name\cf4 : \cf12 "Fer"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 27\cf4 , \cf10 symbol\cf4 : \cf12 "Co"\cf4 , \cf10 name\cf4 : \cf12 "Cobalt"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 28\cf4 , \cf10 symbol\cf4 : \cf12 "Ni"\cf4 , \cf10 name\cf4 : \cf12 "Nickel"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 29\cf4 , \cf10 symbol\cf4 : \cf12 "Cu"\cf4 , \cf10 name\cf4 : \cf12 "Cuivre"\cf4 ),\
+    \cf9 Element\cf4 (\cf10 number\cf4 : \cf11 30\cf4 , \cf10 symbol\cf4 : \cf12 "Zn"\cf4 , \cf10 name\cf4 : \cf12 "Zinc"\cf4 )\
+]\
+\
+
+\f0\b \cf2 enum
+\f1\b0 \cf4  \cf5 QuizMode\cf4  \{\
+    
+\f0\b \cf2 case
+\f1\b0 \cf4  \cf7 numberToElement\cf4 \
+    
+\f0\b \cf2 case
+\f1\b0 \cf4  \cf7 elementToNumber\cf4 \
+\}\
+\
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 ContentView\cf4 : \cf6 View\cf4  \{\
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 mode\cf4 : \cf9 QuizMode\cf4 ? = 
+\f0\b \cf2 nil
+\f1\b0 \cf4 \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 showResults\cf4  = 
+\f0\b \cf2 false
+\f1\b0 \cf4 \
+\
+    
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 body\cf4 : 
+\f0\b \cf2 some
+\f1\b0 \cf4  \cf6 View\cf4  \{\
+        \cf8 ZStack\cf4  \{\
+            \cf13 LinearGradient\cf4 (\cf13 gradient\cf4 : \cf8 Gradient\cf4 (\cf13 colors\cf4 : [\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.15\cf4 ), \cf8 Color\cf4 .\cf14 white\cf4 ]),\
+                           \cf13 startPoint\cf4 : .\cf14 topLeading\cf4 , \cf13 endPoint\cf4 : .\cf14 bottomTrailing\cf4 )\
+                .\cf13 ignoresSafeArea\cf4 ()\
+            \
+            
+\f0\b \cf2 if
+\f1\b0 \cf4  
+\f0\b \cf2 let
+\f1\b0 \cf4  mode = \cf15 mode\cf4  \{\
+                \cf9 QuizView\cf4 (\cf9 mode\cf4 : mode) \{\
+                    
+\f0\b \cf2 self
+\f1\b0 \cf4 .\cf15 mode\cf4  = 
+\f0\b \cf2 nil
+\f1\b0 \cf4 \
+                \}\
+            \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 showResults\cf4  \{\
+                \cf9 ResultsView\cf4 (\cf10 onBack\cf4 : \{ \cf15 showResults\cf4  = 
+\f0\b \cf2 false
+\f1\b0 \cf4  \})\
+            \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                \cf8 VStack\cf4 (\cf13 spacing\cf4 : \cf11 25\cf4 ) \{\
+                    \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55358 \u56800 
+\f1  Quiz des \'e9l\'e9ments"\cf4 )\
+                        .\cf13 font\cf4 (.\cf14 largeTitle\cf4 .\cf13 bold\cf4 ())\
+                        .\cf13 foregroundColor\cf4 (.\cf14 pink\cf4 )\
+                    \
+                    \cf8 Text\cf4 (\cf12 "Choisis ton mode de jeu :"\cf4 )\
+                        .\cf13 font\cf4 (.\cf14 title3\cf4 )\
+                        .\cf13 foregroundColor\cf4 (.\cf14 black\cf4 )\
+                    \
+                    \cf8 Button\cf4 (\cf13 action\cf4 : \{ \cf15 mode\cf4  = .\cf15 numberToElement\cf4  \}) \{\
+                        \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55357 \u56610 
+\f1  Num\'e9ro \uc0\u8594  \'c9l\'e9ment"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title3\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 padding\cf4 ()\
+                            .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : .\cf14 infinity\cf4 )\
+                            .\cf13 background\cf4 (\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.2\cf4 ))\
+                            .\cf13 cornerRadius\cf4 (\cf11 15\cf4 )\
+                    \}\
+                    \
+                    \cf8 Button\cf4 (\cf13 action\cf4 : \{ \cf15 mode\cf4  = .\cf15 elementToNumber\cf4  \}) \{\
+                        \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55358 \u56810 
+\f1  \'c9l\'e9ment \uc0\u8594  Num\'e9ro"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title3\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 padding\cf4 ()\
+                            .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : .\cf14 infinity\cf4 )\
+                            .\cf13 background\cf4 (\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.2\cf4 ))\
+                            .\cf13 cornerRadius\cf4 (\cf11 15\cf4 )\
+                    \}\
+\
+                    \cf8 Button\cf4 (\cf13 action\cf4 : \{ \cf15 showResults\cf4  = 
+\f0\b \cf2 true
+\f1\b0 \cf4  \}) \{\
+                        \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55357 \u56522 
+\f1  R\'e9sultats enregistr\'e9s"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title3\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 padding\cf4 ()\
+                            .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : .\cf14 infinity\cf4 )\
+                            .\cf13 background\cf4 (\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.15\cf4 ))\
+                            .\cf13 cornerRadius\cf4 (\cf11 15\cf4 )\
+                    \}\
+                \}\
+                .\cf13 padding\cf4 ()\
+                .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : \cf11 400\cf4 )\
+            \}\
+        \}\
+    \}\
+\}\
+\
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 QuizView\cf4 : \cf6 View\cf4  \{\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 mode\cf4 : \cf9 QuizMode\cf4 \
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 onQuit\cf4 : () -> \cf8 Void\cf4 \
+    \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 questions\cf4  = \cf15 first30Elements\cf4 .\cf13 shuffled\cf4 ()\
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 currentIndex\cf4  = \cf11 0\cf4 \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 score\cf4  = \cf11 0\cf4 \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 showResult\cf4  = 
+\f0\b \cf2 false
+\f1\b0 \cf4 \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 answerOptions\cf4 : [\cf8 String\cf4 ] = []\
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 selectedAnswer\cf4 : \cf8 String\cf4 ? = 
+\f0\b \cf2 nil
+\f1\b0 \cf4 \
+    \
+    
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 currentQuestion\cf4 : \cf9 Element\cf4  \{ \cf15 questions\cf4 [\cf15 currentIndex\cf4 ] \}\
+    \
+    
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 body\cf4 : 
+\f0\b \cf2 some
+\f1\b0 \cf4  \cf6 View\cf4  \{\
+        \cf8 ZStack\cf4  \{\
+            \cf13 LinearGradient\cf4 (\cf13 gradient\cf4 : \cf8 Gradient\cf4 (\cf13 colors\cf4 : [\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.1\cf4 ), \cf8 Color\cf4 .\cf14 white\cf4 ]),\
+                           \cf13 startPoint\cf4 : .\cf14 top\cf4 , \cf13 endPoint\cf4 : .\cf14 bottom\cf4 )\
+                .\cf13 ignoresSafeArea\cf4 ()\
+            \
+            \cf8 VStack\cf4 (\cf13 spacing\cf4 : \cf11 25\cf4 ) \{\
+                \cf8 Text\cf4 (\cf12 "Question \cf4 \\(\cf15 currentIndex\cf4  + \cf11 1\cf4 )\cf12  sur \cf4 \\(\cf15 questions\cf4 .\cf14 count\cf4 )\cf12 "\cf4 )\
+                    .\cf13 font\cf4 (.\cf14 headline\cf4 )\
+                    .\cf13 foregroundColor\cf4 (.\cf14 pink\cf4 )\
+                \
+                \cf8 Group\cf4  \{\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 mode\cf4  == .\cf15 numberToElement\cf4  \{\
+                        \cf8 Text\cf4 (\cf12 "Quel est l'\'e9l\'e9ment n\'b0 \cf4 \\(\cf15 currentQuestion\cf4 .number)\cf12  ?"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title2\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 multilineTextAlignment\cf4 (.\cf14 center\cf4 )\
+                            .\cf13 fixedSize\cf4 (\cf13 horizontal\cf4 : 
+\f0\b \cf2 false
+\f1\b0 \cf4 , \cf13 vertical\cf4 : 
+\f0\b \cf2 true
+\f1\b0 \cf4 )\
+                            .\cf13 padding\cf4 ()\
+                    \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                        \cf8 Text\cf4 (\cf12 "Quel est le num\'e9ro atomique de \cf4 \\(\cf15 currentQuestion\cf4 .name)\cf12  ?"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title2\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 multilineTextAlignment\cf4 (.\cf14 center\cf4 )\
+                            .\cf13 fixedSize\cf4 (\cf13 horizontal\cf4 : 
+\f0\b \cf2 false
+\f1\b0 \cf4 , \cf13 vertical\cf4 : 
+\f0\b \cf2 true
+\f1\b0 \cf4 )\
+                            .\cf13 padding\cf4 ()\
+                    \}\
+                \}\
+                .\cf13 font\cf4 (.\cf14 title2\cf4 .\cf13 bold\cf4 ())\
+                .\cf13 multilineTextAlignment\cf4 (.\cf14 center\cf4 )\
+                .\cf13 padding\cf4 ()\
+                \
+                \cf8 ForEach\cf4 (\cf15 answerOptions\cf4 , \cf8 id\cf4 : \\.
+\f0\b \cf2 self
+\f1\b0 \cf4 ) \{ answer 
+\f0\b \cf2 in
+\f1\b0 \cf4 \
+                    \cf8 Button\cf4 (\cf13 action\cf4 : \{ \cf10 selectAnswer\cf4 (answer) \}) \{\
+                        \cf8 Text\cf4 (answer)\
+                            .\cf13 font\cf4 (.\cf14 title3\cf4 )\
+                            .\cf13 padding\cf4 ()\
+                            .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : .\cf14 infinity\cf4 )\
+                            .\cf13 background\cf4 (\cf10 buttonColor\cf4 (\cf10 for\cf4 : answer))\
+                            .\cf13 cornerRadius\cf4 (\cf11 12\cf4 )\
+                    \}\
+                    .\cf13 disabled\cf4 (\cf15 selectedAnswer\cf4  != 
+\f0\b \cf2 nil
+\f1\b0 \cf4 )\
+                \}\
+                \
+                \cf8 Spacer\cf4 ()\
+                \
+                
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 showResult\cf4  \{\
+                    \cf8 VStack\cf4  \{\
+                        \cf8 Text\cf4 (\cf12 "Score final : \cf4 \\(\cf15 score\cf4 )\cf12 /\cf4 \\(\cf15 questions\cf4 .\cf14 count\cf4 )\cf12 "\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 title\cf4 .\cf13 bold\cf4 ())\
+                            .\cf13 foregroundColor\cf4 (.\cf14 pink\cf4 )\
+                        \
+                        \cf8 Button\cf4 (\cf12 "Rejouer"\cf4 ) \{\
+                            \cf10 resetQuiz\cf4 ()\
+                        \}\
+                        .\cf13 padding\cf4 ()\
+                        .\cf13 background\cf4 (\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.2\cf4 ))\
+                        .\cf13 cornerRadius\cf4 (\cf11 12\cf4 )\
+                        \
+                        \cf8 Button\cf4 (\cf12 "
+\f2 \uc0\u55356 \u57312 
+\f1  Menu principal"\cf4 ) \{\
+                            \cf10 saveScore\cf4 ()\
+                            \cf15 onQuit\cf4 ()\
+                        \}\
+                        .\cf13 padding\cf4 (.\cf14 top\cf4 , \cf11 10\cf4 )\
+                    \}\
+                \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                    \cf8 Button\cf4 (\cf13 action\cf4 : \{ \cf15 onQuit\cf4 () \}) \{\
+                        \cf8 Text\cf4 (\cf12 "Quitter"\cf4 )\
+                            .\cf13 font\cf4 (.\cf14 headline\cf4 )\
+                            .\cf13 foregroundColor\cf4 (.\cf14 black\cf4 )\
+                            .\cf13 padding\cf4 ()\
+                            .\cf13 padding\cf4 (.\cf14 horizontal\cf4 , \cf11 30\cf4 ) \cf16 // largeur du bouton\cf4 \
+                            .\cf13 background\cf4 (\cf8 Color\cf4 (\cf8 red\cf4 : \cf11 1.0\cf4 , \cf8 green\cf4 : \cf11 0.0\cf4 , \cf8 blue\cf4 : \cf11 1.0\cf4 ).\cf13 opacity\cf4 (\cf11 0.3\cf4 ))\
+                            .\cf13 cornerRadius\cf4 (\cf11 12\cf4 )\
+                    \}\
+                    .\cf13 padding\cf4 (.\cf14 bottom\cf4 , \cf11 150\cf4 )\
+                \}\
+            \}\
+            .\cf13 padding\cf4 ()\
+            .\cf13 onAppear\cf4 (\cf13 perform\cf4 : \cf10 generateAnswers\cf4 )\
+        \}\
+    \}\
+    \
+    
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf7 generateAnswers\cf4 () \{\
+        
+\f0\b \cf2 let
+\f1\b0 \cf4  correctAnswer = \cf15 mode\cf4  == .\cf15 numberToElement\cf4  ? \cf15 currentQuestion\cf4 .name : \cf8 String\cf4 (\cf15 currentQuestion\cf4 .number)\
+        
+\f0\b \cf2 var
+\f1\b0 \cf4  options = \cf8 Set\cf4 ([correctAnswer])\
+        \
+        
+\f0\b \cf2 while
+\f1\b0 \cf4  options.\cf14 count\cf4  < \cf11 4\cf4  \{\
+            
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 mode\cf4  == .\cf15 numberToElement\cf4  \{\
+                options.\cf13 insert\cf4 (\cf15 first30Elements\cf4 .\cf13 randomElement\cf4 ()!.\cf15 name\cf4 )\
+            \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                options.\cf13 insert\cf4 (\cf8 String\cf4 (\cf8 Int\cf4 .\cf13 random\cf4 (\cf13 in\cf4 : \cf11 1\cf4 ...\cf11 30\cf4 )))\
+            \}\
+        \}\
+        \
+        \cf15 answerOptions\cf4  = \cf8 Array\cf4 (options).\cf13 shuffled\cf4 ()\
+    \}\
+    \
+    
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf7 selectAnswer\cf4 (\cf7 _\cf4  answer: \cf8 String\cf4 ) \{\
+        \cf15 selectedAnswer\cf4  = answer\
+        
+\f0\b \cf2 let
+\f1\b0 \cf4  correctAnswer = \cf15 mode\cf4  == .\cf15 numberToElement\cf4  ? \cf15 currentQuestion\cf4 .name : \cf8 String\cf4 (\cf15 currentQuestion\cf4 .number)\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  answer == correctAnswer \{\
+            \cf15 score\cf4  += \cf11 1\cf4 \
+        \}\
+        \
+        DispatchQueue.\cf14 main\cf4 .asyncAfter(deadline: .\cf14 now\cf4 () + \cf11 1.0\cf4 ) \{\
+            
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 currentIndex\cf4  + \cf11 1\cf4  < \cf15 questions\cf4 .\cf14 count\cf4  \{\
+                \cf15 currentIndex\cf4  += \cf11 1\cf4 \
+                \cf15 selectedAnswer\cf4  = 
+\f0\b \cf2 nil
+\f1\b0 \cf4 \
+                \cf10 generateAnswers\cf4 ()\
+            \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                \cf15 showResult\cf4  = 
+\f0\b \cf2 true
+\f1\b0 \cf4 \
+            \}\
+        \}\
+    \}\
+    \
+    
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf7 buttonColor\cf4 (\cf7 for\cf4  answer: \cf8 String\cf4 ) -> \cf8 Color\cf4  \{\
+        
+\f0\b \cf2 guard
+\f1\b0 \cf4  
+\f0\b \cf2 let
+\f1\b0 \cf4  selected = \cf15 selectedAnswer\cf4  
+\f0\b \cf2 else
+\f1\b0 \cf4  \{ 
+\f0\b \cf2 return
+\f1\b0 \cf4  \cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.15\cf4 ) \}\
+        
+\f0\b \cf2 let
+\f1\b0 \cf4  correctAnswer = \cf15 mode\cf4  == .\cf15 numberToElement\cf4  ? \cf15 currentQuestion\cf4 .name : \cf8 String\cf4 (\cf15 currentQuestion\cf4 .number)\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  selected == answer \{\
+            
+\f0\b \cf2 return
+\f1\b0 \cf4  answer == correctAnswer ? \cf8 Color\cf4 .\cf14 green\cf4 .\cf13 opacity\cf4 (\cf11 0.3\cf4 ) : \cf8 Color\cf4 .\cf14 red\cf4 .\cf13 opacity\cf4 (\cf11 0.3\cf4 )\
+        \}\
+        
+\f0\b \cf2 return
+\f1\b0 \cf4  \cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.15\cf4 )\
+    \}\
+    \
+    
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf7 resetQuiz\cf4 () \{\
+        \cf15 questions\cf4 .\cf13 shuffle\cf4 ()\
+        \cf15 currentIndex\cf4  = \cf11 0\cf4 \
+        \cf15 score\cf4  = \cf11 0\cf4 \
+        \cf15 showResult\cf4  = 
+\f0\b \cf2 false
+\f1\b0 \cf4 \
+        \cf15 selectedAnswer\cf4  = 
+\f0\b \cf2 nil
+\f1\b0 \cf4 \
+        \cf10 generateAnswers\cf4 ()\
+    \}\
+    \
+    
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf7 saveScore\cf4 () \{\
+        
+\f0\b \cf2 var
+\f1\b0 \cf4  results = \cf6 UserDefaults\cf4 .\cf14 standard\cf4 .\cf13 array\cf4 (\cf13 forKey\cf4 : \cf12 "quizResults"\cf4 ) 
+\f0\b \cf2 as
+\f1\b0 \cf4 ? [\cf8 Int\cf4 ] ?? []\
+        results.\cf13 append\cf4 (\cf15 score\cf4 )\
+        \cf6 UserDefaults\cf4 .\cf14 standard\cf4 .\cf13 set\cf4 (results, \cf13 forKey\cf4 : \cf12 "quizResults"\cf4 )\
+    \}\
+\}\
+\
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 ResultsView\cf4 : \cf6 View\cf4  \{\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  \cf7 onBack\cf4 : () -> \cf8 Void\cf4 \
+    \
+    \cf8 @State\cf4  
+\f0\b \cf2 private
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 scores\cf4 : [\cf8 Int\cf4 ] = []\
+    \
+    
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 body\cf4 : 
+\f0\b \cf2 some
+\f1\b0 \cf4  \cf6 View\cf4  \{\
+        \cf8 ZStack\cf4  \{\
+            \cf13 LinearGradient\cf4 (\cf13 gradient\cf4 : \cf8 Gradient\cf4 (\cf13 colors\cf4 : [\cf8 Color\cf4 .\cf14 pink\cf4 .\cf13 opacity\cf4 (\cf11 0.15\cf4 ), \cf8 Color\cf4 .\cf14 white\cf4 ]),\
+                           \cf13 startPoint\cf4 : .\cf14 top\cf4 , \cf13 endPoint\cf4 : .\cf14 bottom\cf4 )\
+                .\cf13 ignoresSafeArea\cf4 ()\
+            \
+            \cf8 VStack\cf4  \{\
+                \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55357 \u56522 
+\f1  R\'e9sultats enregistr\'e9s"\cf4 )\
+                .\cf13 font\cf4 (.\cf14 largeTitle\cf4 .\cf13 bold\cf4 ())\
+                .\cf13 foregroundColor\cf4 (.\cf14 pink\cf4 )\
+                \cf8 Button\cf4 (\cf13 action\cf4 : \{\
+                    \cf16 // Vider UserDefaults et mettre scores \'e0 vide\cf4 \
+                \cf6 UserDefaults\cf4 .\cf14 standard\cf4 .\cf13 removeObject\cf4 (\cf13 forKey\cf4 : \cf12 "quizResults"\cf4 )\
+                    \cf15 scores\cf4 .\cf13 removeAll\cf4 ()\
+                \}) \{\
+                \cf8 Text\cf4 (\cf12 "
+\f2 \uc0\u55357 \u56785 \u65039 
+\f1  Effacer les r\'e9sultats"\cf4 )\
+                    .\cf13 font\cf4 (.\cf14 headline\cf4 )\
+                    .\cf13 foregroundColor\cf4 (.\cf14 black\cf4 )\
+                    .\cf13 padding\cf4 ()\
+                    .\cf13 frame\cf4 (\cf13 maxWidth\cf4 : .\cf14 infinity\cf4 )\
+                    .\cf13 background\cf4 (\cf8 Color\cf4 (\cf8 red\cf4 : \cf11 1.0\cf4 , \cf8 green\cf4 : \cf11 0.0\cf4 , \cf8 blue\cf4 : \cf11 1.0\cf4 ).\cf13 opacity\cf4 (\cf11 0.2\cf4 ))\
+                        .\cf13 cornerRadius\cf4 (\cf11 12\cf4 )\
+            \}\
+            .\cf13 padding\cf4 (.\cf14 bottom\cf4 , \cf11 10\cf4 )\
+                \
+                
+\f0\b \cf2 if
+\f1\b0 \cf4  \cf15 scores\cf4 .\cf14 isEmpty\cf4  \{\
+                    \cf8 Text\cf4 (\cf12 "Aucun r\'e9sultat pour le moment."\cf4 )\
+                        .\cf13 foregroundColor\cf4 (.\cf14 gray\cf4 )\
+                        .\cf13 fontWeight\cf4 (.\cf14 heavy\cf4 )\
+                        .\cf13 padding\cf4 (.\cf14 bottom\cf4 , \cf11 0\cf4 )\
+                \} 
+\f0\b \cf2 else
+\f1\b0 \cf4  \{\
+                    \cf8 List\cf4  \{\
+                        \cf8 ForEach\cf4 (\cf15 scores\cf4 .\cf14 indices\cf4 , \cf8 id\cf4 : \\.
+\f0\b \cf2 self
+\f1\b0 \cf4 ) \{ index 
+\f0\b \cf2 in
+\f1\b0 \cf4 \
+                            \cf8 HStack\cf4  \{\
+                                \cf8 Text\cf4 (\cf12 "Essai \cf4 \\(index + \cf11 1\cf4 )\cf12 : \cf4 \\(\cf15 scores\cf4 [index])\cf12 /30"\cf4 )\
+                                \cf8 Spacer\cf4 ()\
+                                
+\f0\b \cf2 if
+\f1\b0 \cf4  index > \cf11 0\cf4  \{\
+                                    
+\f0\b \cf2 let
+\f1\b0 \cf4  previous = \cf8 Double\cf4 (\cf15 scores\cf4 [index - \cf11 1\cf4 ])\
+                                    
+\f0\b \cf2 let
+\f1\b0 \cf4  current = \cf8 Double\cf4 (\cf15 scores\cf4 [index])\
+                                    
+\f0\b \cf2 let
+\f1\b0 \cf4  improvement = ((current - previous) / previous) * \cf11 100\cf4 \
+                                    \cf8 Text\cf4 (\cf8 String\cf4 (\cf8 format\cf4 : \cf12 "%+.0f%%"\cf4 , improvement))\
+                                        .\cf13 foregroundColor\cf4 (improvement >= \cf11 0\cf4  ? .\cf14 green\cf4  : .\cf14 red\cf4 )\
+                                \}\
+                            \}\
+                        \}\
+                    \}\
+                \}\
+                \
+                \cf8 Button\cf4 (\cf12 "
+\f2 \uc0\u55356 \u57312 
+\f1  Retour au menu"\cf4 ) \{\
+                    \cf15 onBack\cf4 ()\
+                \}\
+                .\cf13 font\cf4 (.\cf14 headline\cf4 )\
+                .\cf13 foregroundColor\cf4 (.\cf14 black\cf4 )\
+                .\cf13 padding\cf4 ()\
+                .\cf13 padding\cf4 (.\cf14 horizontal\cf4 , \cf11 30\cf4 ) \cf16 // largeur du bouton\cf4 \
+                .\cf13 background\cf4 (\cf8 Color\cf4 (\cf8 red\cf4 : \cf11 1.0\cf4 , \cf8 green\cf4 : \cf11 0.0\cf4 , \cf8 blue\cf4 : \cf11 1.0\cf4 ).\cf13 opacity\cf4 (\cf11 0.2\cf4 ))\
+                .\cf13 cornerRadius\cf4 (\cf11 12\cf4 )\
+                .\cf13 padding\cf4 (.\cf14 bottom\cf4 , \cf11 200\cf4 )\
+            \}\
+            .\cf13 padding\cf4 ()\
+            .\cf13 onAppear\cf4  \{\
+                \cf15 scores\cf4  = \cf6 UserDefaults\cf4 .\cf14 standard\cf4 .\cf13 array\cf4 (\cf13 forKey\cf4 : \cf12 "quizResults"\cf4 ) 
+\f0\b \cf2 as
+\f1\b0 \cf4 ? [\cf8 Int\cf4 ] ?? []\
+            \}\
+        \}\
+    \}\
+\}\
+\
+\cf16 // 
+\f0\b \cf17 MARK: - Preview
+\f1\b0 \cf4 \
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 ContentView_Previews\cf4 : \cf6 PreviewProvider\cf4  \{\
+    
+\f0\b \cf2 static
+\f1\b0 \cf4  
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf7 previews\cf4 : 
+\f0\b \cf2 some
+\f1\b0 \cf4  \cf6 View\cf4  \{\
+        \cf9 ContentView\cf4 ()\
+    \}\
+\}}

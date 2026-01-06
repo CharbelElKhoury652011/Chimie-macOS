@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Mode d’export : app-store pour la soumission sur l’App Store -->
+    <key>method</key>
+    <string>app-store</string>
+
+    <!-- Indique à Xcode de signer automatiquement l’application -->
+    <key>signingStyle</key>
+    <string>manual</string>
+
+    <!-- Nom exact du provisioning profile pour l’export -->
+    <key>provisioningProfiles</key>
+    <dict>
+        <key>com.charbel.Chimie</key>
+        <string>Chimie Provisioning Profile</string>
+    </dict>
+
+    <!-- Identité de signature -->
+    <key>signingCertificate</key>
+    <string>Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)</string>
+
+    <!-- Générer IPA -->
+    <key>compileBitcode</key>
+    <true/>
+
+    <!-- Crée une archive IPA prête à envoyer à l’App Store Connect -->
+    <key>uploadSymbols</key>
+    <true/>
+</dict>
+</plist>

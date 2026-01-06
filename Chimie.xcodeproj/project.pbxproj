@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B02314282F0BBB150068C60C /* ChimieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02314262F0BBB150068C60C /* ChimieUITestsLaunchTests.swift */; };
+		B02314292F0BBB150068C60C /* ChimieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02314272F0BBB150068C60C /* ChimieUITests.swift */; };
+		B06CC90D2EBBDE3000D95F72 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06CC90C2EBBDE3000D95F72 /* DataManager.swift */; };
+		B06CC90F2EBBDECC00D95F72 /* Brouillon2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B06CC90E2EBBDECC00D95F72 /* Brouillon2.rtf */; };
+		B071B27F2EABC29D00F3005D /* ChimieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071B27E2EABC29D00F3005D /* ChimieApp.swift */; };
+		B071B2812EABC29D00F3005D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071B2802EABC29D00F3005D /* ContentView.swift */; };
+		B071B2832EABC2A000F3005D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B071B2822EABC2A000F3005D /* Assets.xcassets */; };
+		B071B2862EABC2A000F3005D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B071B2852EABC2A000F3005D /* Preview Assets.xcassets */; };
+		B071B2902EABC2A000F3005D /* ChimieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071B28F2EABC2A000F3005D /* ChimieTests.swift */; };
+		B071B2AB2EABF6BF00F3005D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B071B2AA2EABF6BF00F3005D /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B071B28C2EABC2A000F3005D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B071B2732EABC29D00F3005D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B071B27A2EABC29D00F3005D;
+			remoteInfo = Chimie;
+		};
+		B071B2962EABC2A000F3005D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B071B2732EABC29D00F3005D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B071B27A2EABC29D00F3005D;
+			remoteInfo = Chimie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B02313CE2F0BB4160068C60C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B02314262F0BBB150068C60C /* ChimieUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChimieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B02314272F0BBB150068C60C /* ChimieUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChimieUITests.swift; sourceTree = "<group>"; };
+		B06CC90B2EBBDD3A00D95F72 /* Chimie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chimie.entitlements; sourceTree = "<group>"; };
+		B06CC90C2EBBDE3000D95F72 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B06CC90E2EBBDECC00D95F72 /* Brouillon2.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Brouillon2.rtf; sourceTree = SOURCE_ROOT; };
+		B071B27B2EABC29D00F3005D /* Chimie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chimie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B071B27E2EABC29D00F3005D /* ChimieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChimieApp.swift; sourceTree = "<group>"; };
+		B071B2802EABC29D00F3005D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B071B2822EABC2A000F3005D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B071B2852EABC2A000F3005D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B071B28B2EABC2A000F3005D /* ChimieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChimieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B071B28F2EABC2A000F3005D /* ChimieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChimieTests.swift; sourceTree = "<group>"; };
+		B071B2952EABC2A000F3005D /* ChimieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChimieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B071B2AA2EABF6BF00F3005D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
+		B071B2AC2EAC00AC00F3005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B071B2782EABC29D00F3005D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2882EABC2A000F3005D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2922EABC2A000F3005D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B02314252F0BBB150068C60C /* ChimieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B02314272F0BBB150068C60C /* ChimieUITests.swift */,
+				B02314262F0BBB150068C60C /* ChimieUITestsLaunchTests.swift */,
+			);
+			path = ChimieUITests;
+			sourceTree = "<group>";
+		};
+		B071B2722EABC29D00F3005D = {
+			isa = PBXGroup;
+			children = (
+				B071B27D2EABC29D00F3005D /* Chimie */,
+				B071B28E2EABC2A000F3005D /* ChimieTests */,
+				B02314252F0BBB150068C60C /* ChimieUITests */,
+				B071B27C2EABC29D00F3005D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B071B27C2EABC29D00F3005D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B071B27B2EABC29D00F3005D /* Chimie.app */,
+				B071B28B2EABC2A000F3005D /* ChimieTests.xctest */,
+				B071B2952EABC2A000F3005D /* ChimieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B071B27D2EABC29D00F3005D /* Chimie */ = {
+			isa = PBXGroup;
+			children = (
+				B06CC90E2EBBDECC00D95F72 /* Brouillon2.rtf */,
+				B06CC90B2EBBDD3A00D95F72 /* Chimie.entitlements */,
+				B071B2AC2EAC00AC00F3005D /* Info.plist */,
+				B071B2AA2EABF6BF00F3005D /* Launch Screen.storyboard */,
+				B071B27E2EABC29D00F3005D /* ChimieApp.swift */,
+				B071B2802EABC29D00F3005D /* ContentView.swift */,
+				B06CC90C2EBBDE3000D95F72 /* DataManager.swift */,
+				B071B2822EABC2A000F3005D /* Assets.xcassets */,
+				B071B2842EABC2A000F3005D /* Preview Content */,
+			);
+			path = Chimie;
+			sourceTree = "<group>";
+		};
+		B071B2842EABC2A000F3005D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B071B2852EABC2A000F3005D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B071B28E2EABC2A000F3005D /* ChimieTests */ = {
+			isa = PBXGroup;
+			children = (
+				B071B28F2EABC2A000F3005D /* ChimieTests.swift */,
+			);
+			path = ChimieTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B071B27A2EABC29D00F3005D /* Chimie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B071B29F2EABC2A000F3005D /* Build configuration list for PBXNativeTarget "Chimie" */;
+			buildPhases = (
+				B071B2772EABC29D00F3005D /* Sources */,
+				B071B2782EABC29D00F3005D /* Frameworks */,
+				B071B2792EABC29D00F3005D /* Resources */,
+				B02313CE2F0BB4160068C60C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chimie;
+			productName = Chimie;
+			productReference = B071B27B2EABC29D00F3005D /* Chimie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B071B28A2EABC2A000F3005D /* ChimieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B071B2A22EABC2A000F3005D /* Build configuration list for PBXNativeTarget "ChimieTests" */;
+			buildPhases = (
+				B071B2872EABC2A000F3005D /* Sources */,
+				B071B2882EABC2A000F3005D /* Frameworks */,
+				B071B2892EABC2A000F3005D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B071B28D2EABC2A000F3005D /* PBXTargetDependency */,
+			);
+			name = ChimieTests;
+			productName = ChimieTests;
+			productReference = B071B28B2EABC2A000F3005D /* ChimieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B071B2942EABC2A000F3005D /* ChimieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B071B2A52EABC2A000F3005D /* Build configuration list for PBXNativeTarget "ChimieUITests" */;
+			buildPhases = (
+				B071B2912EABC2A000F3005D /* Sources */,
+				B071B2922EABC2A000F3005D /* Frameworks */,
+				B071B2932EABC2A000F3005D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B071B2972EABC2A000F3005D /* PBXTargetDependency */,
+			);
+			name = ChimieUITests;
+			productName = ChimieUITests;
+			productReference = B071B2952EABC2A000F3005D /* ChimieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B071B2732EABC29D00F3005D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B071B27A2EABC29D00F3005D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B071B28A2EABC2A000F3005D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B071B27A2EABC29D00F3005D;
+					};
+					B071B2942EABC2A000F3005D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B071B27A2EABC29D00F3005D;
+					};
+				};
+			};
+			buildConfigurationList = B071B2762EABC29D00F3005D /* Build configuration list for PBXProject "Chimie" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B071B2722EABC29D00F3005D;
+			productRefGroup = B071B27C2EABC29D00F3005D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B071B27A2EABC29D00F3005D /* Chimie */,
+				B071B28A2EABC2A000F3005D /* ChimieTests */,
+				B071B2942EABC2A000F3005D /* ChimieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B071B2792EABC29D00F3005D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B071B2862EABC2A000F3005D /* Preview Assets.xcassets in Resources */,
+				B071B2AB2EABF6BF00F3005D /* Launch Screen.storyboard in Resources */,
+				B06CC90F2EBBDECC00D95F72 /* Brouillon2.rtf in Resources */,
+				B071B2832EABC2A000F3005D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2892EABC2A000F3005D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2932EABC2A000F3005D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B071B2772EABC29D00F3005D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B071B2812EABC29D00F3005D /* ContentView.swift in Sources */,
+				B06CC90D2EBBDE3000D95F72 /* DataManager.swift in Sources */,
+				B071B27F2EABC29D00F3005D /* ChimieApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2872EABC2A000F3005D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B071B2902EABC2A000F3005D /* ChimieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B071B2912EABC2A000F3005D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02314292F0BBB150068C60C /* ChimieUITests.swift in Sources */,
+				B02314282F0BBB150068C60C /* ChimieUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B071B28D2EABC2A000F3005D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B071B27A2EABC29D00F3005D /* Chimie */;
+			targetProxy = B071B28C2EABC2A000F3005D /* PBXContainerItemProxy */;
+		};
+		B071B2972EABC2A000F3005D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B071B27A2EABC29D00F3005D /* Chimie */;
+			targetProxy = B071B2962EABC2A000F3005D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B071B29D2EABC2A000F3005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B071B29E2EABC2A000F3005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B071B2A02EABC2A000F3005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Chimie/Chimie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Chimie/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2Q8Q55AZ42;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 2Q8Q55AZ42;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chimie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chimie;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.Chimie;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.charbel.ChimiemacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Chimie Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Chimie macOS Provisioning Profile";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "2,6";
+			};
+			name = Debug;
+		};
+		B071B2A12EABC2A000F3005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Chimie/Chimie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Chimie/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2Q8Q55AZ42;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 2Q8Q55AZ42;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chimie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chimie;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.Chimie;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.charbel.ChimiemacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Chimie Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Chimie macOS Provisioning Profile";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "2,6";
+			};
+			name = Release;
+		};
+		B071B2A32EABC2A000F3005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q8Q55AZ42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.ChimieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chimie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chimie";
+			};
+			name = Debug;
+		};
+		B071B2A42EABC2A000F3005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q8Q55AZ42;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.ChimieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chimie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chimie";
+			};
+			name = Release;
+		};
+		B071B2A62EABC2A000F3005D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q8Q55AZ42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.ChimieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chimie;
+			};
+			name = Debug;
+		};
+		B071B2A72EABC2A000F3005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q8Q55AZ42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charbel.ChimieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chimie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B071B2762EABC29D00F3005D /* Build configuration list for PBXProject "Chimie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B071B29D2EABC2A000F3005D /* Debug */,
+				B071B29E2EABC2A000F3005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B071B29F2EABC2A000F3005D /* Build configuration list for PBXNativeTarget "Chimie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B071B2A02EABC2A000F3005D /* Debug */,
+				B071B2A12EABC2A000F3005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B071B2A22EABC2A000F3005D /* Build configuration list for PBXNativeTarget "ChimieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B071B2A32EABC2A000F3005D /* Debug */,
+				B071B2A42EABC2A000F3005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B071B2A52EABC2A000F3005D /* Build configuration list for PBXNativeTarget "ChimieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B071B2A62EABC2A000F3005D /* Debug */,
+				B071B2A72EABC2A000F3005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B071B2732EABC29D00F3005D /* Project object */;
+}
