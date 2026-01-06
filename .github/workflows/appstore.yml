@@ -52,7 +52,7 @@ jobs:
             -archivePath build/Chimie-MacCatalyst.xcarchive \
             archive \
             CODE_SIGN_STYLE=Manual \
-            CODE_SIGN_IDENTITY="3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)"
+            CODE_SIGN_IDENTITY="Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)"
 
       - name: Export Mac App Store package
         run: |
