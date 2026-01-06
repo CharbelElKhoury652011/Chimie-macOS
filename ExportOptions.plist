@@ -12,7 +12,7 @@
 		<string>Chimie macOS Provisioning Profile</string>
 	</dict>
 	<key>signingCertificate</key>
-	<string>Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)</string>
+	<string>3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)</string>
 	<key>compileBitcode</key>
 	<true/>
 	<key>uploadSymbols</key>
