@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Méthode : Mac App Store -->
+    <!-- Mode d’export pour Mac App Store -->
     <key>method</key>
-    <string>mac-app-store</string>
+    <string>app-store</string>
 
-    <!-- Signature manuelle -->
+    <!-- Style de signature -->
     <key>signingStyle</key>
     <string>manual</string>
 
-    <!-- Provisioning Profile exact -->
+    <!-- Provisioning profile exact -->
     <key>provisioningProfiles</key>
     <dict>
         <key>com.charbel.ChimiemacOS</key>
         <string>Chimie macOS Provisioning Profile</string>
     </dict>
 
-    <!-- Identité de signature -->
+    <!-- Certificat de signature -->
     <key>signingCertificate</key>
     <string>Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)</string>
-    
-    <!-- Optionnel : permet d’envoyer l’app directement au Mac App Store -->
-    <key>uploadBitcode</key>
-    <false/>
+
+    <!-- Générer bitcode -->
+    <key>compileBitcode</key>
+    <true/>
+
+    <!-- Symboles pour crash reports -->
+    <key>uploadSymbols</key>
+    <true/>
 </dict>
 </plist>
