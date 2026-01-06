@@ -1,68 +1,58 @@
-name: Upload Mac App Store
+name: Build Mac Catalyst App
 
 on:
-  workflow_dispatch:
   push:
     branches: [ "main" ]
 
 jobs:
-  build-mac:
+  build:
     runs-on: macos-14
 
     steps:
-      - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Setup Xcode
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '16.2'
+    - name: Install Certificates
+      env:
+        DIST_CERT: ${{ secrets.MAC_CERTIFICATE }}
+        INSTALL_CERT: ${{ secrets.MAC_INSTALLER_CERTIFICATE }}
+        CERT_PASSWORD: ${{ secrets.MAC_CERTIFICATE_PASSWORD }}
+        PROFILE: ${{ secrets.MAC_PROVISION_PROFILE }}
+      run: |
+        KEYCHAIN=build.keychain
+        security create-keychain -p "" $KEYCHAIN
+        security default-keychain -s $KEYCHAIN
+        security unlock-keychain -p "" $KEYCHAIN
 
-      - name: Create keychain
-        run: |
-          security create-keychain -p "805238" build.keychain
-          security set-keychain-settings -lut 7200 build.keychain
-          security unlock-keychain -p "805238" build.keychain
-          security list-keychains -s build.keychain
+        echo "$DIST_CERT" | base64 --decode > dist.p12
+        echo "$INSTALL_CERT" | base64 --decode > installer.p12
+        echo "$PROFILE" | base64 --decode > profile.provisionprofile
 
-      - name: Import certificate
-        run: |
-          echo "$CERTIFICATE_BASE64" | base64 --decode > cert.p12
-          security import cert.p12 -k build.keychain -P "$CERTIFICATE_PASSWORD" -T /usr/bin/codesign
-          security set-key-partition-list -S apple-tool:,apple: -s -k "805238" build.keychain
-          security default-keychain -s build.keychain
-        env:
-          CERTIFICATE_BASE64: ${{ secrets.CERTIFICATE_BASE64 }}
-          CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_PASSWORD }}
+        security import dist.p12 -k $KEYCHAIN -P "$CERT_PASSWORD" -T /usr/bin/codesign
+        security import installer.p12 -k $KEYCHAIN -P "$CERT_PASSWORD" -T /usr/bin/pkgbuild
 
-      - name: Import provisioning profile
-        run: |
-          echo "$PROVISIONING_PROFILE_BASE64" | base64 --decode > Chimie.mobileprovision
-          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp Chimie.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
-        env:
-          PROVISIONING_PROFILE_BASE64: ${{ secrets.PROVISIONING_PROFILE_BASE64 }}
+        mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+        cp profile.provisionprofile ~/Library/MobileDevice/Provisioning\ Profiles/
 
-      - name: Build Mac Catalyst archive
-        run: |
-          mkdir -p build
-          xcodebuild -project Chimie.xcodeproj \
-            -scheme Chimie \
-            -configuration Release \
-            -destination 'platform=macOS,variant=Mac Catalyst' \
-            -archivePath build/Chimie-MacCatalyst.xcarchive \
-            archive \
-            CODE_SIGN_STYLE=Manual \
-            CODE_SIGN_IDENTITY="Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)"
+    - name: Build Archive
+      run: |
+        xcodebuild archive \
+          -workspace Chimie.xcworkspace \
+          -scheme Chimie \
+          -destination "generic/platform=macOS" \
+          -archivePath build/Chimie-MacCatalyst.xcarchive
 
-      - name: Export Mac App Store package
-        run: |
-          xcodebuild -exportArchive \
-            -archivePath build/Chimie-MacCatalyst.xcarchive \
-            -exportOptionsPlist ExportOptions.plist \
-            -exportPath build
+    - name: Export App
+      run: |
+        xcodebuild -exportArchive \
+          -archivePath build/Chimie-MacCatalyst.xcarchive \
+          -exportOptionsPlist ExportOptions.plist \
+          -exportPath build
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Chimie-MacCatalyst
-          path: build/*.app
+    - name: Upload to App Store Connect
+      run: |
+        xcrun altool --upload-app \
+          --type macos \
+          --file build/*.pkg \
+          --apiKey ${{ secrets.APPSTORE_KEY_ID }} \
+          --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}

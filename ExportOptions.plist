@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>method</key>
-	<string>app-store-connect</string>
-	<key>signingStyle</key>
-	<string>manual</string>
-	<key>provisioningProfiles</key>
-	<dict>
-		<key>com.charbel.ChimiemacOS</key>
-		<string>Chimie macOS Provisioning Profile</string>
-	</dict>
-	<key>signingCertificate</key>
-	<string>3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)</string>
-	<key>compileBitcode</key>
-	<true/>
-	<key>uploadSymbols</key>
-	<true/>
+
+    <key>method</key>
+    <string>app-store-connect</string>
+
+    <key>signingStyle</key>
+    <string>manual</string>
+
+    <key>provisioningProfiles</key>
+    <dict>
+        <key>com.charbel.ChimiemacOS</key>
+        <string>Chimie macOS Provisioning Profile</string>
+    </dict>
+
+    <!-- ⚠️ OBLIGATOIRE pour Mac Catalyst -->
+    <key>installerSigningCertificate</key>
+    <string>3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)</string>
+
 </dict>
 </plist>
