@@ -19,7 +19,7 @@
 
     <!-- Identité de signature -->
     <key>signingCertificate</key>
-    <string>Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)</string>
+    <string>3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)</string>
 
     <!-- Compiler avec Bitcode activé -->
     <key>compileBitcode</key>
