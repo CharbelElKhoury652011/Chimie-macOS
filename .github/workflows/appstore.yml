@@ -1,4 +1,4 @@
-name: Upload to App Store
+name: Upload Mac App Store
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-mac:
     runs-on: macos-14
 
     steps:
@@ -36,35 +36,33 @@ jobs:
 
       - name: Import provisioning profile
         run: |
-          echo "$PROVISIONING_PROFILE_BASE64" | base64 --decode > profile.mobileprovision
+          echo "$PROVISIONING_PROFILE_BASE64" | base64 --decode > Chimie.mobileprovision
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/Chimie.mobileprovision
+          cp Chimie.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
         env:
           PROVISIONING_PROFILE_BASE64: ${{ secrets.PROVISIONING_PROFILE_BASE64 }}
 
-      - name: Build archive
+      - name: Build Mac Catalyst archive
         run: |
           mkdir -p build
           xcodebuild -project Chimie.xcodeproj \
-          -scheme Chimie \
-          -configuration Release \
-          -archivePath build/Chimie.xcarchive \
-          CODE_SIGN_STYLE=Manual \
-          CODE_SIGN_IDENTITY="iPhone Distribution" \
-          archive
-          
-      - name: Check archive
-        run: ls -l $PWD/build
-        
-      - name: Export IPA
+            -scheme Chimie \
+            -configuration Release \
+            -destination 'platform=macOS,variant=Mac Catalyst' \
+            -archivePath build/Chimie-MacCatalyst.xcarchive \
+            archive \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="Apple Distribution: Rose Marie Akiki (2Q8Q55AZ42)"
+
+      - name: Export Mac App Store package
         run: |
           xcodebuild -exportArchive \
-          -archivePath build/Chimie.xcarchive \
-          -exportOptionsPlist ExportOptions.plist \
-          -exportPath build
+            -archivePath build/Chimie-MacCatalyst.xcarchive \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath build
 
-      - name: Upload to App Store
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ChimieIPA
-          path: build/*.ipa
+          name: Chimie-MacCatalyst
+          path: build/*.app
