@@ -37,7 +37,6 @@ jobs:
     - name: Build Archive
       run: |
         xcodebuild archive \
-          -workspace Chimie.xcworkspace \
           -scheme Chimie \
           -destination "generic/platform=macOS" \
           -archivePath build/Chimie-MacCatalyst.xcarchive
