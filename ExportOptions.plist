@@ -4,7 +4,7 @@
 <dict>
     <!-- Mode d’export pour Mac App Store -->
     <key>method</key>
-    <string>app-store</string>
+    <string>app-store-connect</string>
 
     <!-- Style de signature : manuel -->
     <key>signingStyle</key>
