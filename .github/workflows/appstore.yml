@@ -39,7 +39,9 @@ jobs:
         xcodebuild archive \
           -scheme Chimie \
           -destination "generic/platform=macOS" \
-          -archivePath build/Chimie-MacCatalyst.xcarchive
+          -archivePath build/Chimie-MacCatalyst.xcarchive \
+          COMPILER_INDEX_STORE_ENABLE=NO \
+          -allowProvisioningUpdates
 
     - name: Export App
       run: |
