@@ -64,10 +64,9 @@ jobs:
           -allowProvisioningUpdates \
           -verbose
           
-    - name: Save PKG as artifact
+    - name: Save XCArchive as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ChimieMacPkg
-        path: build/*.pkg
+        name: ChimieMacArchive
+        path: build/Chimie.xcarchive
 
-          
