@@ -14,7 +14,7 @@
     <!-- App Bundle ID -->
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.charbel.ChimiemacOS</key>
+        <key>com.charbel.Chimie</key>
         <string>Chimie macOS Provisioning Profile</string>
     </dict>
 
