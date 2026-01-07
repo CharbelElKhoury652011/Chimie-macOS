@@ -4,21 +4,33 @@
 <plist version="1.0">
 <dict>
 
+    <!-- OBLIGATOIRE pour Mac Catalyst -->
     <key>method</key>
-    <string>app-store-connect</string>
+    <string>mac-application</string>
 
     <key>signingStyle</key>
     <string>manual</string>
 
+    <!-- App Bundle ID -->
     <key>provisioningProfiles</key>
     <dict>
         <key>com.charbel.ChimiemacOS</key>
         <string>Chimie macOS Provisioning Profile</string>
     </dict>
 
-    <!-- ⚠️ OBLIGATOIRE pour Mac Catalyst -->
+    <!-- Certificat APP -->
+    <key>signingCertificate</key>
+    <string>Apple Distribution</string>
+
+    <!-- Certificat INSTALLER (.pkg) -->
     <key>installerSigningCertificate</key>
-    <string>3rd Party Mac Developer Installer: Rose Marie Akiki (2Q8Q55AZ42)</string>
+    <string>3rd Party Mac Developer Installer</string>
+
+    <key>teamID</key>
+    <string>2Q8Q55AZ42</string>
+
+    <key>destination</key>
+    <string>export</string>
 
 </dict>
 </plist>

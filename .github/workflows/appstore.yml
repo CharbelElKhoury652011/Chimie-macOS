@@ -60,7 +60,9 @@ jobs:
         xcodebuild -exportArchive \
           -archivePath build/Chimie.xcarchive \
           -exportOptionsPlist ExportOptions.plist \
-          -exportPath build
+          -exportPath build \
+          -allowProvisioningUpdates \
+          -verbose
 
     - name: Upload to App Store Connect
       run: |
